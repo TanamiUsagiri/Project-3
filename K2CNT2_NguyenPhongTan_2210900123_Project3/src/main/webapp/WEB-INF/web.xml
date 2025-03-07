@@ -23,7 +23,7 @@
     <!-- Khai báo Servlet -->
     <servlet>
     <servlet-name>AddVehicleServlet</servlet-name>
-    <servlet-class>controllers.AddVehicleServlet</servlet-class>
+    <servlet-class>controllers.Npt_AddVehicleServlet</servlet-class>
 </servlet>
 <servlet-mapping>
     <servlet-name>AddVehicleServlet</servlet-name>
@@ -31,7 +31,7 @@
 </servlet-mapping>
     <servlet>
         <servlet-name>MotorbikeServlet</servlet-name>
-        <servlet-class>controllers.MotorbikeServlet</servlet-class>
+        <servlet-class>controllers.Npt_MotorbikeServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -39,6 +39,6 @@
         <url-pattern>/motorbikes</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
-        <welcome-file>login.jsp</welcome-file>
+        <welcome-file>Npt_login.jsp</welcome-file>
     </welcome-file-list>
 </web-app>
