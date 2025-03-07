@@ -32,14 +32,14 @@
                 <td>${mb.year}</td>
                 <td>${mb.status}</td>
                 <td>
+                	<a href="edit.jsp?id=${mb.vehicleId}&brand=${mb.brand}&model=${mb.model}&price=${mb.price}&year=${mb.year}&status=${mb.status}" class="btn btn-warning">Sửa</a>
     				<a href="delete?id=${mb.vehicleId}" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa không?');">Xóa</a>
-    				<a href="edit.jsp?id=${mb.vehicleId}&brand=${mb.brand}&model=${mb.model}&price=${mb.price}&year=${mb.year}&status=${mb.status}" class="btn btn-warning">Sửa</a>
-    				<a href="addVehicle.jsp"><button class="btn btn-primary">Thêm Xe</button></a>
 				</td>
             </tr>
         </c:forEach>
         </tbody>
     </table>
+    <a href="addVehicle.jsp"><button class="btn btn-primary">Thêm Xe</button></a>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

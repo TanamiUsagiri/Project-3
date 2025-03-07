@@ -31,9 +31,11 @@ public class LoginServlet extends HttpServlet {
             if (rs.next()) {
                 HttpSession session = request.getSession();
                 session.setAttribute("username", rs.getString("npt_name"));
-                response.sendRedirect("NavPage.jsp");
+                session.setAttribute("userId", rs.getInt("npt_user_id")); // Lưu userId vào session
+                System.out.println("User ID: " + rs.getInt("npt_user_id")); // Debug Log
+                response.sendRedirect("motorbikes");
             } else {
-            	request.setAttribute("error", "Tài khoản hoặc mật khẩu không đúng hoặc chưa đăng ký.");
+                request.setAttribute("error", "Tài khoản hoặc mật khẩu không đúng hoặc chưa đăng ký.");
                 request.getRequestDispatcher("login.jsp").forward(request, response);
             }
             conn.close();

@@ -19,7 +19,7 @@ public class MotorbikeServlet extends HttpServlet {
         request.setAttribute("listMotorbike", list);
         RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
         dispatcher.forward(request, response);
-        System.out.println("👉 Servlet đã được gọi!");
+        System.out.println("👉 Motorbike Servlet đã được gọi!");
     }
     
 }
